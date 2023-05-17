@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <style>
+        .form label,
+        .form input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form class="form" action="/update/{{name}}" autocomplete  method="post" onsubmit="alert('Formulário enviado com sucesso!')" return false>
+            <label for="inome">Novo nome:</label>
+            <input type="text" name="nome" id="inome" placeholder="Ex.: Tiago">
+            <label for="ipeso">Novo Peso</label>
+            <input type="number" name="peso" id="ipeso" placeholder="Ex.: 78">
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+    <div>
+        <button> <a href="{{ url_for('index') }}" target="_self">Voltar</a></button>
+    </div>
+</body>
+</html>
